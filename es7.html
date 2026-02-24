@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 7</title>
+
+        <style>
+                body{
+                    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+                    background-color:purple;  
+                    text-align: center;
+                    padding:20px;
+                    
+
+                }
+
+                h1{
+                    margin-bottom:20px ;
+                    color:#ffffff
+
+
+                }
+                .container{
+                    background: rgb(2, 2, 2);
+                    color:rgb(255, 0, 0);
+                    padding: 20px;
+                    border-radius: 5px;
+                }
+                input{
+                     width: 30%;
+                     padding: 8px;
+                     border-radius: 5px;
+                     border: 1px solid #ff0000;
+                }
+               .button {
+  border: none;
+  color: rgb(72, 255, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {background-color: #008CBA;} /* Blue */
+        </style>
+
+
+</head>
+<body>
+        <p>   <h1>Generatore di frasi casuali (1 parte)</h1>
+        </p>
+<div class="container">
+   
+<input type="text" id="soggetto" placeholder="Inserisci Soggetto">
+<input type="text" id="verbo" placeholder="Inserisci Verbo">
+
+<button class="button button2" onclick="aggiungi()">Aggiungi alla lista</button>
+   
+      <p>
+         <h3>Liste inserite</h3>
+            <ul id="listaSoggetti"></ul>
+            <ul id="listaVerbi"></ul>
+      </p>
+<button class="button button2" onclick="GeneraFrasi()"> Mescola e genera frasi</button>
+
+<div class="frasi" id="output"> </div>
+
+
+</div>
+
+
+
+    <script>
+
+let soggetti=[];
+let verbi=[];
+ function aggiungi(){
+    let soggetto= document.getElementById("soggetto").value;
+    let verbo= document.getElementById("verbo").value;
+    soggetti.push(soggetto);
+    verbi.push(verbo);
+    document.getElementById("listaSoggetti").innerHTML += "<li>Soggetto: " + soggetto + "</li>"
+    document.getElementById("listaVerbi").innerHTML += "<li>Verbo: " + verbo + "</li>"
+ }
+
+
+
+    </script>
+   
+</body>
+</html>

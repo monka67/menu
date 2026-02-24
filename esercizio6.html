@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 6</title>
+</head>
+<body>
+    <p>Esercizi di esempio di conversioni con le stringhe</p>
+    <input type="text" name="" id="in1"> <br>
+   
+    <button onclick="conversione()"> converti</button>
+    <p id="out"></p>
+      <h1>Risultati:</h1>
+       <p id="maiuscolo"></p>
+       <p id="minuscolo"></p>
+       <p id="lunghezza"></p>
+       <p id="invertita"></p>
+       <p id="spazi"></p>
+       <p id="primocarattere"></p>
+       <p id="secondocarattere"></p> 
+       <p id="ultimocarattere"></p>
+   
+
+<script>
+ function conversione(){
+   let testo=document.getElementById("in1").value;
+    document.getElementById("out").innerText="trasformo la seguente stringa "+ testo;
+    document.getElementById("minuscolo").innerText=testo.toUpperCase();
+    document.getElementById("maiuscolo").innerText=testo.toLowerCase();
+    document.getElementById("lunghezza").innerText=testo.length;
+    document.getElementById("invertita").innerText=testo.split("").reverse().join();
+    document.getElementById("spazi").innerText=testo.replaceAll(" "," -");
+    document.getElementById("primocarattere").innerText=testo[0];
+    document.getElementById("secondocarattere").innerText=testo[1];
+    document.getElementById("ultimocarattere").innerText=testo[testo.length-1];
+
+
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
