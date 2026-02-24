@@ -1,0 +1,72 @@
+<html>
+
+    <head>
+        <title>esercizio 5</title>
+    </head>
+
+    <body>
+        
+    </p>
+
+    <p>Dati 3 numeri, indica il maggiore e il quadrato di ciascuno di essi.
+Se si tratta di una terna pitagorica verra scritto.
+Se uno o più numeri sono minori di zero verra scritta.. 
+        <div>
+            <input type="number" name="n1" id="n1">
+            <input type="number" name="n2" id="n2">
+            <input type="number" name="n3" id="n3">
+            <button onclick="squareCalcMax()">Calcola</button>
+        </div>
+
+        <script>
+            function squareCalcMax(a, b, c){
+                let num1=Number(document.getElementById("n1").value);
+                let num2=Number(document.getElementById("n2").value);
+                let num3=Number(document.getElementById("n3").value);
+
+                let s1 = Math.pow(num1, 2);
+                let s2 = Math.pow(num2, 2);
+                let s3 = Math.pow(num3, 2);
+
+                
+                let max = Math.max(num1, num2, num3);
+                
+                if (
+                    (num1 < 0) || (num2 < 0) || (num3 < 0)
+                )
+                {
+                    document.getElementById("result4").innerHTML="un numero e minore di 0 "
+                    document.getElementById("result1").innerHTML=""
+                    document.getElementById("result2").innerHTML="" 
+                    document.getElementById("result3").innerHTML="" 
+                    return;
+                }
+
+                document.getElementById("result1").innerHTML="il numero maggiore è "+max;
+
+                document.getElementById("result2").innerHTML="quadrato del primo "+s1+"<br>"+"quadrato del secondo "+s2+"<br>"+"quadrato del secondo "+s3;
+
+
+                if (
+                    (s1 + s2 === s3)
+                )
+                 {
+                    document.getElementById("result3").innerHTML="è una terna pitagorico"
+                 }
+                else{
+                    document.getElementById("result3").innerHTML="non è una terna pitagorico"
+                }
+
+            }
+
+        </script>
+
+         <p id="result1"></p>
+         <p id="result2"></p>
+         <p id="result3"></p>
+         <p id="result4"></p>
+
+
+    </body>
+
+</html>
